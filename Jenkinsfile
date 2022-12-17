@@ -13,13 +13,13 @@ pipeline{
   
     stage('build'){
       step{
-        sh "cd simple-java && javac Programme.java"
+        sh "cd simple-java && javac Main.java"
       }
     }
   
     stage('run'){
       step{
-        sh "cd simple-java && java Programme"
+        sh "cd simple-java && java Main"
       }
     }
   }
