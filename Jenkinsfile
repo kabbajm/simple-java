@@ -5,20 +5,20 @@ pipeline{
   stages {
   
     stage('clone'){
-      step{
+      steps{
         sh "rm -rf *"
         sh "git clone https://github.com/kabbajm/simple-java/"        
       }
     }
   
     stage('build'){
-      step{
+      steps{
         sh "cd simple-java && javac Main.java"
       }
     }
   
     stage('run'){
-      step{
+      steps{
         sh "cd simple-java && java Main"
       }
     }
