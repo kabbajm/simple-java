@@ -19,7 +19,7 @@ pipeline{
   
     stage('run'){
       step{
-        sh "git clone https://github.com/kabbajm/simple-java/"
+        sh "cd simple-java && javac Programme.java"
       }
     }
   }
